@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zidi Website</title>
+
+    <!--    favicon link-->
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+
+    <!--    Google font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/client/css/font.css">
+
+
+    <link rel="stylesheet" href="/static/client/css/style.css">
+
+     <!--- preload images -->
+  <link rel="preload" as="image" href="static/client/images/hero-banner.jpg">
+  <link rel="preload" as="image" href="static/client/images/hero-shape-1.png">
+  <link rel="preload" as="image" href="static/client/images/hero-shape-2.png">
+
+</head>
+<body>
+
+        {% include "_navbar.html" %}
+        <div>
+            {% include "_messages.html" %}
+            {% block body %}{% endblock %}
+        </div>
+
+
+
+      <!--  #PRELOADER  -->
+    <div class="preloader" data-preloader>
+        <span class="line"></span>
+    </div>
+
+  <div class="cursor-outline" data-cursor></div>
+
+
+    <!--    js script link-->
+    <script src="static/js/script.js"></script>
+
+    <!-- - ionicon link-->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+     <br>
+
+         {% include "footer.html" %}
+
+</html>
